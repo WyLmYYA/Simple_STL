@@ -1,0 +1,1 @@
+/usr/local/bin/x86_64-apple-darwin21-g++-11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/simple_allocate.dir/src/alloc/alloc.o CMakeFiles/simple_allocate.dir/src/alloc/simple_allocate.o -o ../bin/simple_allocate 

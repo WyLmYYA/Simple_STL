@@ -1,0 +1,13 @@
+project(SIMPLE_STL)
+
+
+# 源文件 可以写多个file，来连接多个文件
+file(GLOB SOURCE_1 "${CMAKE_SOURCE_DIR}/src/alloc/*.cpp")
+
+# 可执行文件放的地方
+SET(EXECUTABLE_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/bin/")
+
+# 头文件
+include_directories("${CMAKE_SOURCE_DIR}/include/")
+
+add_executable(simple_allocate ${SOURCE_1})

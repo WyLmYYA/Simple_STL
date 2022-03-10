@@ -1,0 +1,3 @@
+/Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles/simple_allocate.dir
+/Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles/edit_cache.dir
+/Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles/rebuild_cache.dir
