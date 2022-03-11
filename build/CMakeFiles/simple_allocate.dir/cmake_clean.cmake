@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/simple_allocate.dir/src/alloc/alloc.o.d"
   "CMakeFiles/simple_allocate.dir/src/alloc/simple_allocate.o"
   "CMakeFiles/simple_allocate.dir/src/alloc/simple_allocate.o.d"
+  "CMakeFiles/simple_allocate.dir/src/alloc/skip_list.o"
+  "CMakeFiles/simple_allocate.dir/src/alloc/skip_list.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

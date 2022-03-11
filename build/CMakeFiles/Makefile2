@@ -81,12 +81,12 @@ clean: CMakeFiles/simple_allocate.dir/clean
 CMakeFiles/simple_allocate.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_allocate.dir/build.make CMakeFiles/simple_allocate.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_allocate.dir/build.make CMakeFiles/simple_allocate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles --progress-num=1,2,3 "Built target simple_allocate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles --progress-num=1,2,3,4 "Built target simple_allocate"
 .PHONY : CMakeFiles/simple_allocate.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/simple_allocate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/simple_allocate.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedance/codeRepo/SimpleSTL/build/CMakeFiles 0
 .PHONY : CMakeFiles/simple_allocate.dir/rule

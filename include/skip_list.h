@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <vector>
+using namespace std;
 
 
 
@@ -58,6 +59,9 @@ namespace SIMPLE_STL{
         // 获取随机层数
         int getRandomLevel();
 
+        //打印
+	    void printNode();   
+
         // 插入 删除 查找
         SkipListNode<T>* insert(int k, T v);
         SkipListNode<T>* find(int k);
@@ -67,8 +71,68 @@ namespace SIMPLE_STL{
         /* data */
         // 尾结点
         SkipListNode<T>* tail;
+
+       //找到当前列表或者node的最大层数
+	    int nodeLevel(vector<SkipNode<T>*> p); 
        
     };
+    // 分层打印
+    template<class T> void SkipList<T>::printNode()
+    {
+
+        for (int i = 0; i < maxLevel; i++)
+        {
+            SkipNode<T>* tmp = head;
+            int lineLen = 1;
+
+            if (tmp->next[i]->key != maxInt)
+            {
+                cout << "\n";
+                cout << "This is level " << i << ":" << endl;
+                cout << "{";
+
+                while (tmp->next[i] != nullptr && tmp->next[i]->key != maxInt)
+                {
+                    cout << "(" << "Key: " << tmp->next[i]->key << ", ";
+                    cout << "Value: " << tmp->next[i]->value << ")";
+
+                    tmp = tmp->next[i];
+
+                    if (tmp->next[i] != nullptr && tmp->next[i]->key != maxInt)
+                    {
+                        cout << ", ";
+                    }
+
+                    if (lineLen++ % 5 == 0) cout << "\n";
+                }
+                cout << "}" << "\n";
+            }
+        }
+    }
+
+    
+    template<class T> int SkipList<T>::nodeLevel(vector<SkipNode<T>*> next)
+    {
+        int node_level = 0;
+        
+        if (next[0]->key == maxInt)
+        {
+            return node_level;
+        }
+
+        for (int i = 0; i < next.size(); i++)
+        {
+            if (next[i] != nullptr && next[i]->key != maxInt)
+            {
+                node_level++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        return node_level;
+    }
 
     /**
      * @brief 跳表的初始化构造函数，初始化的时候头尾结点分别赋值整型的最小最大值用来使链表有序
@@ -167,6 +231,66 @@ namespace SIMPLE_STL{
         
         return head;
         
+    }
+    
+    /**
+     * @brief 查找某个节点
+     * 
+     * @tparam T 
+     * @param k 
+     * @return SkipListNode<T>* 返回这个几点
+     */
+    
+    template<class T> SkipListNode<T>* SkipList<T>::find(int k){
+        SkipNode<T>* tmp = head;
+        int current_level = nodeLevel(tmp->next);
+
+        for (int i = (current_level - 1); i > -1; i--)
+        {
+            while (tmp->next[i] != nullptr && tmp->next[i]->key < k)
+            {
+                tmp = tmp->next[i];
+            }
+        }
+        tmp = tmp->next[0];
+
+        if (tmp->key == k)
+        {
+            cout << "\nThis key " << x << " has been found\n";
+            return tmp;
+        }
+        else
+        {
+            //cout << " \nThis key " << x << " doesn't exit\n";
+            return nullptr;
+        }
+    }
+
+    template<class T> SkipListNode<T>* SkipList<T>::deleteNode(int k){
+        SkipNode<T>* node = find(k);
+        if (!node)
+        {
+            cout << "\n This deleting node" << x << "doesn't exist" << endl;
+            return head;
+        }
+        else
+        {
+            SkipNode<T>* tmp = head;
+            int x_level = node->next.size();
+
+            for (int i = (x_level - 1); i > -1; i--)
+            {
+                while (tmp->next[i] != nullptr && tmp->next[i]->key < k)
+                {
+                    tmp = tmp->next[i];
+                }
+                tmp->next[i] = tmp->next[i]->next[i];
+
+                cout << "This node " << x << " has been deleted from level " << i << endl;
+            }
+
+            return head;
+        }
     }
     
 }// end of namespace SIMPLE_STL

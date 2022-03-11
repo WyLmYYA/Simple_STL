@@ -159,6 +159,21 @@ src/alloc/simple_allocate.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_allocate.dir/build.make CMakeFiles/simple_allocate.dir/src/alloc/simple_allocate.s
 .PHONY : src/alloc/simple_allocate.s
 
+# target to build an object file
+src/alloc/skip_list.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_allocate.dir/build.make CMakeFiles/simple_allocate.dir/src/alloc/skip_list.o
+.PHONY : src/alloc/skip_list.o
+
+# target to preprocess a source file
+src/alloc/skip_list.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_allocate.dir/build.make CMakeFiles/simple_allocate.dir/src/alloc/skip_list.i
+.PHONY : src/alloc/skip_list.i
+
+# target to generate assembly for a file
+src/alloc/skip_list.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_allocate.dir/build.make CMakeFiles/simple_allocate.dir/src/alloc/skip_list.s
+.PHONY : src/alloc/skip_list.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +189,9 @@ help:
 	@echo "... src/alloc/simple_allocate.o"
 	@echo "... src/alloc/simple_allocate.i"
 	@echo "... src/alloc/simple_allocate.s"
+	@echo "... src/alloc/skip_list.o"
+	@echo "... src/alloc/skip_list.i"
+	@echo "... src/alloc/skip_list.s"
 .PHONY : help
 
 

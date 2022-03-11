@@ -8,5 +8,10 @@
   "directory": "/Users/bytedance/codeRepo/SimpleSTL/build",
   "command": "/usr/local/bin/x86_64-apple-darwin21-g++-11  -I/Users/bytedance/codeRepo/SimpleSTL/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -o CMakeFiles/simple_allocate.dir/src/alloc/simple_allocate.o -c /Users/bytedance/codeRepo/SimpleSTL/src/alloc/simple_allocate.cpp",
   "file": "/Users/bytedance/codeRepo/SimpleSTL/src/alloc/simple_allocate.cpp"
+},
+{
+  "directory": "/Users/bytedance/codeRepo/SimpleSTL/build",
+  "command": "/usr/local/bin/x86_64-apple-darwin21-g++-11  -I/Users/bytedance/codeRepo/SimpleSTL/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -o CMakeFiles/simple_allocate.dir/src/alloc/skip_list.o -c /Users/bytedance/codeRepo/SimpleSTL/src/alloc/skip_list.cpp",
+  "file": "/Users/bytedance/codeRepo/SimpleSTL/src/alloc/skip_list.cpp"
 }
 ]
